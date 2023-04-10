@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benito Juárez nuevo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <header>
+        <script src=""></script>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="title py-3 my-3">Ingrese los datos seleccionados para Benito Juárez</h1>
+            <form>        
+                <div class="mb-3">
+                    <label for="txtFecha">Fecha</label>
+                        <input type="date" class="form-control" name="txtFecha" id="txtFecha" :value="benito.fecha"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtCampoamor">Campoamor Ruta 86</label>
+                        <input type="float" class="form-control" name="txtCampoamor" id="txtCampoamor" :value="benito.campoamor"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtLopez">Estacion Lopez</label>
+                        <input type="float" class="form-control" name="txtLopez" id="txtLopez" :value="benito.lopez"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtDionisia">Santa Dionisia</label>
+                        <input type="float" class="form-control" name="txtDionisia" id="txtDionisia" :value="benito.dionisia" ><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtSMN">S.M.N. Ruta 86 </label>
+                        <input type="float" class="form-control" name="txtSMN" id="txtSMN" :value="benito.smn" ><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtUriburu">Tedin Uriburu</label>
+                        <input type="float" class="form-control" name="txtUriburu" id="txtUriburu" :value="benito.uriburu"><br>
+                </div>
+                <button  type="button" class="btn btn-success" onclick="guardar()">Enviar</button>
+            </form>
+            <br>
+        <a href="benito.html" class="btn btn-warning">Principal</a>
+        </div>
+
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/proyecto/java/benito/benito_create.js"></script>
+
+</body>
+</html>

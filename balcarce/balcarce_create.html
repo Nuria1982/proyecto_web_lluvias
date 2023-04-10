@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balcarce nuevo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <header>
+        <script src=""></script>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="title py-3 my-3">Ingrese los datos seleccionados para Balcarce</h1>
+            <form>        
+                <div class="mb-3">
+                    <label for="txtFecha">Fecha</label>
+                        <input type="date" class="form-control" name="txtFecha" id="txtFecha" :value="balcarce.fecha"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtVolcan">El Volcan casco</label>
+                        <input type="float" class="form-control" name="txtVolcan" id="txtVolcan" :value="balcarce.volcan"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtAgrar">Agrar del Sur</label>
+                        <input type="float" class="form-control" name="txtAgrar" id="txtAgrar" :value="balcarce.agrar"><br>
+                </div><div class="mb-3">
+                    <label for="txtInta">INTA</label>
+                        <input type="float" class="form-control" name="txtInta" id="txtInta" :value="balcarce.inta" ><br>
+                </div><div class="mb-3">
+                    <label for="txtPinos">Los Pinos</label>
+                        <input type="float" class="form-control" name="txtPinos" id="txtPinos" :value="balcarce.pinos" ><br>
+                </div><div class="mb-3">
+                    <label for="txtAgustin">San Agustin</label>
+                        <input type="float" class="form-control" name="txtAgustin" id="txtAgustin" :value="balcarce.agustin"><br>
+                </div><div class="mb-3">
+                    <label for="txtAlegre">Vista Alegre</label>
+                        <input type="float" class="form-control" name="txtAlegre" id="txtAlegre" :value="balcarce.alegre"><br>
+                </div>          
+                <button  type="button" class="btn btn-success" onclick="guardar()">Enviar</button>
+            </form>
+            <br>
+        <a href="balcarce.html" class="btn btn-warning">Principal</a>
+        </div>
+
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/proyecto/java/balcarce/balcarce_create.js"></script>
+
+</body>
+</html>
