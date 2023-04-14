@@ -4,10 +4,10 @@ if (document.getElementById("app")) {
     createApp({
         data() {
             return {
-                lluvia: [],
+                lapridas: [],
                 errored: false,
                 loading: true,
-                url: "http://localhost:5000/lluvia"
+                url: "http://localhost:5000/lapridas"
                 }
         },
         methods: {
@@ -15,14 +15,14 @@ if (document.getElementById("app")) {
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
-                        this.lluvia = data;
+                        this.lapridas = data;
                         this.loading = false;
                     })
                     .catch(err => {
                         this.errored = true
                     })},
-                    eliminar(lluvia_laprida) {
-                        const url = 'http://localhost:5000/lluvia/' + lluvia_laprida;
+                    eliminar(laprida) {
+                        const url = 'http://localhost:5000/lapridas/' + laprida;
                         var options = {
                             method: 'DELETE',
                         }

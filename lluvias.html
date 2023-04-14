@@ -23,42 +23,45 @@
                 <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente mas tarde</p>
             </section>
             <section v-else>
-                <div v-if="loading">Cargando....
+                <div v-if="loading">
+                    Cargando....
                     <div class="spinner-border" role="status">
                         <span class="sr-only"></span>
                     </div>
                 </div>
                 <div v-else>
-                    <table class="table table-sm table-responsive-sm table-bordered">
-                        <tr>
-                            <thead class="table-light">
-                            <th scope="col" class="text-center">Id</th>
-                            <th scope="col" class="text-center">Fecha</th>
-                            <th scope="col" class="text-center">Balcarce</th>
-                            <th scope="col" class="text-center">Benito Juarez</th>
-                            <th scope="col" class="text-center">Gral. Lamadrid</th>
-                            <th scope="col" class="text-center">Gral. Pueyrredón</th>
-                            <th scope="col" class="text-center">Laprida</th>
-                            <th scope="col" class="text-center">Loberia</th>
-
-                            </thead>
-                        </tr>
-                    
-                        <tr v-for="lluvia in lluvia">
-                            <td class="text-center">{{lluvia.id}}</td>
-                            <td class="text-center">{{lluvia.fecha}}</td>
-                            <td class="text-center" id="prom_balcarce">{{lluvia.prom_balcarce}}</td>
-                            <td class="text-center" id="prom_benito">{{lluvia.prom_benito}}</td>
-                            <td class="text-center" id="prom_lamadrid">{{lluvia.prom_lamadrid}}</td>
-                            <td class="text-center" id="prom_mdp">{{lluvia.prom_mdp}}</td>
-                            <td class="text-center" id="prom_laprida">{{lluvia.prom_laprida}}</td>
-                            <td class="text-center" id="prom_loberia">{{lluvia.prom_loberia}}</td>
-
-                        </tr>
+                    <table 
+                        class="table table-sm table-responsive-sm table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="text-center">Fecha</th>
+                                <th scope="col" class="text-center">Balcarce</th>
+                                <th scope="col" class="text-center">Benito Juarez</th>
+                                <th scope="col" class="text-center">Gral. Lamadrid</th>
+                                <th scope="col" class="text-center">Gral. Pueyrredón</th>
+                                <th scope="col" class="text-center">Laprida</th>
+                                <th scope="col" class="text-center">Loberia</th>
+                                <th scope="col" class="text-center">Necochea</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="row in lluvias" :key="row.fecha">
+                                <td class="text-center">{{row.fecha}}</td>
+                                <td class="text-center">{{row.prom_balcarce}}</td>
+                                <td class="text-center">{{row.prom_benito}}</td>
+                                <td class="text-center">{{row.prom_lamadrid}}</td>
+                                <td class="text-center">{{row.prom_mdp}}</td>
+                                <td class="text-center">{{row.prom_laprida}}</td>
+                                <td class="text-center">{{row.prom_loberia}}</td>
+                                <td class="text-center">{{row.prom_necochea}}</td>
+                            </tr>
+                        </tbody>
                     </table>
+                </div>
             </section>
         </div>
     </main>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="/proyecto/java/lluvia.js"></script>
 </body>
