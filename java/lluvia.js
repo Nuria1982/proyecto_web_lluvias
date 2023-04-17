@@ -42,6 +42,9 @@ if (document.getElementById("app")) {
                                 this.fetchData(this.url);
                             })
                             .catch((err) => {
+                                this.errored = true
+                                this.var = err;
+                                console.log(this.result);
                                 console.log(err);
                             });
                     },

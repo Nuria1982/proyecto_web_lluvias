@@ -46,17 +46,18 @@
                             </thead>
                         </tr>
                     
-                        <tr v-for="lluvia in lluvia">
-                            <td class="text-center">{{lluvia.id}}</td>
-                            <td class="text-center">{{lluvia.fecha}}</td>
-                            <td class="text-center">{{lluvia.refugio}}</td>
-                            <td class="text-center">{{lluvia.sara}}</td>
-                            <td class="text-center">{{lluvia.pozos}}</td>
-                            <td class="text-center">{{lluvia.rural}}</td>
-                            <td class="text-center">{{lluvia.tegua}}</td>
-                            <td class="text-center">{{lluvia.alegre}}</td>
+                        <tr v-for="laprida in lapridas">
+                            <td class="text-center">{{laprida.id}}</td>
+                            <td class="text-center">{{laprida.fecha}}</td>
+                            <td class="text-center">{{laprida.refugio}}</td>
+                            <td class="text-center">{{laprida.sara}}</td>
+                            <td class="text-center">{{laprida.pozos}}</td>
+                            <td class="text-center">{{laprida.rural}}</td>
+                            <td class="text-center">{{laprida.tegua}}</td>
+                            <td class="text-center">{{laprida.alegre}}</td>
                             <td>
-                            <a :href="'lluvia_update.html?id='+lluvia.id +'&fecha='+lluvia.fecha+'&refugio='+lluvia.refugio+'&sara='+lluvia.sara+'&pozos='+lluvia.pozos+'&rural='+lluvia.rural+'&tegua='+lluvia.tegua+'&alegre='+lluvia.alegre" class="btn btn-primary btn-sm">Modificar</a>
+                            <a :href="'laprida_update.html?id='+laprida.id +'&fecha='+laprida.fecha+'&refugio='+laprida.refugio+'&sara='+laprida.sara+'&pozos='+laprida.pozos+'&rural='+laprida.rural+'&tegua='+laprida.tegua+'&alegre='+laprida.alegre" class="btn btn-primary btn-sm">Modificar</a>
+                            <button style="margin-left: 10px" v-on:click="eliminar(laprida.id)" class="btn btn-secondary btn-sm">Eliminar</button>
                             </td>
                         </tr>
                     </table>
@@ -65,6 +66,6 @@
     </main>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
    
-    <script src="/proyecto/java/lluvia.js"></script>
+    <script src="/proyecto/java/laprida/laprida.js"></script>
 </body>
 </html>
